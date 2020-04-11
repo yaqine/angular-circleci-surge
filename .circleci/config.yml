@@ -19,7 +19,7 @@ jobs:
       - run: npm run build
       - deploy:
           command: |
-            ./node_modules/.bin/surge --project ~/angular-circleci-surge/dist --domain angular-circleci.surge.sh
+            ./node_modules/.bin/surge --project ~/angular-circleci-surge/dist/angular-circleci-surge --domain angular-circleci.surge.sh
 workflows:
     build-and-test:
       jobs:
