@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-        key: angular-circleci-surge-{{ .Branch }}-{{ checksum "package-lock.json"}}
+          key: angular-circleci-surge-{{ .Branch }}-{{ checksum "package-lock.json"}}
       - run: npm install
       - save_cache:
         key: angular-circleci-surge-{{ .Branch }}-{{ checksum "package-lock.json"}}
